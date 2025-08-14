@@ -604,6 +604,46 @@
             height: auto;
             display: block;
         }
+
+        /* Certificaten sectie */
+        .certificates {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .certificates-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .certificate-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 150px;
+            text-align: center;
+        }
+
+        .certificate-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 1rem;
+            object-fit: contain;
+        }
+
+        .certificate-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
         
         /* Responsive */
         @media (max-width: 992px) {
@@ -655,6 +695,14 @@
             .expert-image {
                 max-width: 350px;
             }
+
+            .certificates-container {
+                gap: 2rem;
+            }
+
+            .certificate-item {
+                max-width: 120px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -678,6 +726,14 @@
                 height: 40px;
                 width: 40px;
                 margin-right: 10px;
+            }
+
+            .certificate-item {
+                max-width: 100px;
+            }
+
+            .certificate-logo {
+                height: 60px;
             }
         }
     </style>
@@ -715,7 +771,7 @@
         <div class="hero-content">
             <div class="container">
                 <h1>Maikel <span>Roseval</span></h1>
-                <p>Gediplomeerd seksuoloog, Relatiecoach, workshopleider, Trainer, theatermaker & Educatief Cabaretier. Voorvechter van gezonde seksualiteit & Relaties</p>
+                <p>Gecertificeerd seksuoloog & relatietherapeut | Media-expert | Voorvechter van gezonde seksualiteit</p>
                 <div class="btn-container">
                     <a href="#afspraak" class="btn">Direct Afspraak Maken</a>
                     <a href="#video's" class="btn btn-secondary">Bekijk Mijn Video's</a>
@@ -784,6 +840,14 @@
                         <a href="https://youtu.be/AMLvSqUT0Z8" target="_blank" class="btn">Bekijk op YouTube</a>
                     </div>
                 </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Seksuele Diversiteit</h3>
+                        <p>Alles over verschillende seksuele voorkeuren en identiteiten.</p>
+                        <a href="https://youtube.com" target="_blank" class="btn">Bekijk op YouTube</a>
+                    </div>
+                </div>
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
@@ -830,6 +894,41 @@
                 <img src="https://files.catbox.moe/cv7bnb.jpg" alt="Maikel Roseval" class="expert-image">
                 <div class="expert-info">
                     <h3>Maikel Roseval</h3>
+                    <p>Gediplomeerd seksuoloog, Relatiecoach, workshopleider, Trainer, theatermaker & Educatief Cabaretier. Voorvechter van gezonde seksualiteit & Relaties.</p>
+                    <p>Lid van de Nederlandse Wetenschappelijke Vereniging voor Seksuologie (Register Aantekening 228545).</p>
+                    
+                    <div class="certificates">
+                        <div class="section-title">
+                            <h3>Certificeringen & Registraties</h3>
+                        </div>
+                        <div class="certificates-container">
+                            <div class="certificate-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/NIP_logo.svg/1200px-NIP_logo.svg.png" alt="NIP Nederlands Instituut van Psychologen" class="certificate-logo">
+                                <span class="certificate-name">NIP Lidmaatschap</span>
+                            </div>
+                            <div class="certificate-item">
+                                <img src="https://www.registerplein.nl/wp-content/uploads/2021/03/cropped-favicon-32x32.png" alt="Registerplein" class="certificate-logo">
+                                <span class="certificate-name">Registerplein</span>
+                            </div>
+                            <div class="certificate-item">
+                                <img src="https://www.crkbo.nl/wp-content/uploads/2020/09/cropped-logo-CRKBO-RGB-1-32x32.png" alt="CRKBO" class="certificate-logo">
+                                <span class="certificate-name">CRKBO Geregistreerd</span>
+                            </div>
+                            <div class="certificate-item">
+                                <img src="https://www.ktno.nl/wp-content/uploads/2020/06/cropped-ktno_logo_2019_rgb-32x32.jpg" alt="KTNO" class="certificate-logo">
+                                <span class="certificate-name">KTNO Geaccrediteerd</span>
+                            </div>
+                            <div class="certificate-item">
+                                <img src="https://www.balc.nl/wp-content/uploads/2021/04/BALC-logo-RGB-1.png" alt="BALC" class="certificate-logo">
+                                <span class="certificate-name">BALC Lid</span>
+                            </div>
+                            <div class="certificate-item">
+                                <img src="https://www.nvvs.nl/wp-content/uploads/2019/04/nvvs_logo.png" alt="NVVS" class="certificate-logo">
+                                <span class="certificate-name">NVVS Lidmaatschap</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <p>Na jaren gewerkt te hebben voor het expertise bureau seksualiteit als trainer en voorlichter wilde ik meer. Ik begon een studie seksuologie tot seksuoloog. Na afronding deed ik een studie tot relatiecoach en ook Acceptant & Commitment Therapeut.</p>
                     <p>Als gediplomeerd seksuoloog en relatietherapeut help ik al bijna 10 jaar mensen om een gezond en bevredigend seksleven te hebben. Mijn aanpak is wetenschappelijk onderbouwd, oplossingsgericht en altijd respectvol.</p>
                     <p>Mijn missie is om taboes rond seksualiteit te doorbreken en mensen te helpen zich vrij en empowered te voelen in hun seksualiteit.</p>
