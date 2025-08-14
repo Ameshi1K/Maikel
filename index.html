@@ -98,7 +98,7 @@
         }
         
         .hero {
-            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://files.catbox.moe/xkdybj.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -579,6 +579,31 @@
             background-color: var(--secondary-color);
             transform: translateY(-3px);
         }
+
+        /* Activiteiten Feed */
+        .activities-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .activity-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .activity-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
         
         /* Responsive */
         @media (max-width: 992px) {
@@ -678,6 +703,7 @@
                     <li><a href="#diensten">Diensten</a></li>
                     <li><a href="#video's">Video's</a></li>
                     <li><a href="#over">Over Mij</a></li>
+                    <li><a href="#activiteiten">Activiteiten</a></li>
                     <li><a href="#afspraak">Afspraak</a></li>
                     <li><a href="#" id="film-link">Mijn Werk</a></li>
                 </ul>
@@ -704,22 +730,31 @@
                 <h2>Mijn Diensten</h2>
                 <p>Professionele begeleiding op het gebied van seksualiteit en relaties</p>
             </div>
+            
             <div class="services">
                 <div class="service-card">
-                    <h3>Individuele Seksuologie</h3>
-                    <p>Persoonlijke begeleiding bij seksuele problemen zoals libidoverlies, erectieproblemen, pijn bij seks of problemen met orgasme. Evidence-based methoden in een veilige omgeving.</p>
+                    <h3>Sekscounseling</h3>
+                    <p>Een methode van kortdurende hulpverlening (gemiddeld 5-10 gesprekken) gericht op het opheffen van de seksuele klacht. Dit betekent meestal het verbeteren van de seksuele beleving en/of het seksueel functioneren. Mijn doel is om partners weer te kunnen laten genieten van hun seksleven.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Relatietherapie</h3>
-                    <p>Verbeter de communicatie en intimiteit in je relatie. Samen werken aan een bevredigend seksleven en diepere emotionele verbinding.</p>
+                    <h3>Seksuele disfuncties</h3>
+                    <p>Dit kan variëren van erectiestoornissen en voortijdige ejaculatie bij mannen tot vaginisme (pijn bij penetratie) en problemen met seksueel verlangen bij vrouwen.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Gender & Identiteit</h3>
-                    <p>Begeleiding bij vragen over genderidentiteit en seksuele oriëntatie. Ondersteuning tijdens transitieprocessen en coming-out trajecten.</p>
+                    <h3>Problemen met seksueel verlangen</h3>
+                    <p>Dit kan te maken hebben met een laag libido, verschillen in seksueel verlangen tussen partners, of veranderingen in seksueel verlangen door levensveranderingen zoals zwangerschap, menopauze of ziekte.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Online Consulten</h3>
-                    <p>Professionele hulp vanuit huis via videogesprek. Handig als je niet naar de praktijk kunt komen of je prettiger voelt in je eigen omgeving.</p>
+                    <h3>Seksuele oriëntatie en genderidentiteit</h3>
+                    <p>Steun en begeleiding voor mensen die vragen hebben over hun seksuele oriëntatie of worstelen met hun genderidentiteit.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Seksuele communicatie</h3>
+                    <p>Ik help stellen om effectiever te communiceren over hun seksuele wensen en grenzen, wat kan leiden tot meer wederzijds begrip en tevredenheid.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Seksuele opvoeding</h3>
+                    <p>Begeleiding voor ouders en verzorgers in hoe ze met hun kinderen kunnen praten over seksualiteit en seksuele gezondheid.</p>
                 </div>
             </div>
         </div>
@@ -734,27 +769,19 @@
             
             <div class="video-container">
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/SPlGD-iuUmw" allowfullscreen></iframe>
                     <div class="video-info">
                         <h3>Communicatie in Relaties</h3>
                         <p>Hoe bespreek je moeilijke onderwerpen met je partner?</p>
-                        <a href="https://youtube.com" target="_blank" class="btn">Bekijk op YouTube</a>
+                        <a href="https://youtu.be/SPlGD-iuUmw" target="_blank" class="btn">Bekijk op YouTube</a>
                     </div>
                 </div>
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/AMLvSqUT0Z8" allowfullscreen></iframe>
                     <div class="video-info">
-                        <h3>Seks na Trauma</h3>
-                        <p>Hoe hervind je plezier in intimiteit na nare ervaringen?</p>
-                        <a href="https://youtube.com" target="_blank" class="btn">Bekijk op YouTube</a>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-                    <div class="video-info">
-                        <h3>Seksuele Diversiteit</h3>
-                        <p>Alles over verschillende seksuele voorkeuren en identiteiten.</p>
-                        <a href="https://youtube.com" target="_blank" class="btn">Bekijk op YouTube</a>
+                        <h3>Seksuele Voorlichting</h3>
+                        <p>Belangrijke aspecten van een gezond seksleven</p>
+                        <a href="https://youtu.be/AMLvSqUT0Z8" target="_blank" class="btn">Bekijk op YouTube</a>
                     </div>
                 </div>
             </div>
@@ -763,6 +790,31 @@
                 <a href="https://www.tiktok.com/@mikeroseval" target="_blank" class="btn" style="background-color: #000; color: #fff;">
                     <i class="fab fa-tiktok"></i> Volg mij op TikTok
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="activiteiten">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mijn Activiteiten</h2>
+                <p>Workshops, trainingen en publieke optredens</p>
+            </div>
+
+            <div class="activities-feed">
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/l3pt0c.jpg" alt="Workshop over gezonde relaties">
+                </div>
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/g6wyix.jpg" alt="Training voor professionals">
+                </div>
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/rzvppx.jpg" alt="Publiek optreden over seksuele gezondheid">
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#afspraak" class="btn">Vraag informatie aan</a>
             </div>
         </div>
     </section>
@@ -778,8 +830,10 @@
                 <img src="https://files.catbox.moe/cv7bnb.jpg" alt="Maikel Roseval" class="expert-image">
                 <div class="expert-info">
                     <h3>Maikel Roseval</h3>
-                    <p>Als gecertificeerd seksuoloog en relatietherapeut help ik al meer dan 10 jaar mensen om een gezond en bevredigend seksleven te hebben. Mijn aanpak is wetenschappelijk onderbouwd, oplossingsgericht en altijd respectvol.</p>
-                    <p>Ik ben lid van de Nederlandse Vereniging voor Seksuologie (NVVS) en de Nederlandse Vereniging voor Relatie- en Gezinstherapie (NVRG). Mijn missie is om taboes rond seksualiteit te doorbreken en mensen te helpen zich vrij en empowered te voelen in hun seksualiteit.</p>
+                    <p>Gediplomeerd seksuoloog, Relatiecoach, workshopleider, Trainer, theatermaker & Educatief Cabaretier. Voorvechter van gezonde seksualiteit & Relaties.</p>
+                    <p>Na jaren gewerkt te hebben voor het expertise bureau seksualiteit als trainer en voorlichter wilde ik meer. Ik begon een studie seksuologie tot seksuoloog. Na afronding deed ik een studie tot relatiecoach en ook Acceptant & Commitment Therapeut.</p>
+                    <p>Als gediplomeerd seksuoloog en relatietherapeut help ik al bijna 10 jaar mensen om een gezond en bevredigend seksleven te hebben. Mijn aanpak is wetenschappelijk onderbouwd, oplossingsgericht en altijd respectvol.</p>
+                    <p>Mijn missie is om taboes rond seksualiteit te doorbreken en mensen te helpen zich vrij en empowered te voelen in hun seksualiteit.</p>
                     <p>Naast mijn praktijk ben ik actief op sociale media waar ik educatieve content deel over seksuele gezondheid. Mijn TikTok-kanaal heeft inmiddels meer dan 50.000 volgers die ik wekelijks voorzie van betrouwbare informatie en tips.</p>
                     
                     <div class="expert-social">
@@ -819,7 +873,6 @@
             <div style="display: flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 3rem;">
                 <div style="flex: 1; min-width: 300px;">
                     <h3 style="color: var(--primary-color);">Contactgegevens</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Praktijk Amsterdam Centrum</p>
                     <p><i class="fas fa-phone"></i> <a href="tel:+31201234567" style="color: var(--secondary-color);">020-1234567</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:info@maikelroseval.nl" style="color: var(--secondary-color);">info@maikelroseval.nl</a></p>
                     
@@ -855,9 +908,9 @@
                                 <label for="service">Soort consult*</label>
                                 <select id="service" name="service" required>
                                     <option value="">-- Selecteer --</option>
-                                    <option value="individueel">Individueel consult (€95)</option>
-                                    <option value="relatie">Relatietherapie (€120)</option>
-                                    <option value="online">Online consult (€85)</option>
+                                    <option value="individueel">Individueel consult</option>
+                                    <option value="relatie">Relatietherapie</option>
+                                    <option value="online">Online consult</option>
                                     <option value="vraag">Vraag over behandeling</option>
                                 </select>
                             </div>
@@ -878,7 +931,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Maikel Roseval</h3>
-                    <p>Gecertificeerd seksuoloog en relatietherapeut met een passie voor het doorbreken van taboes rond seksualiteit en relaties.</p>
+                    <p>Gediplomeerd seksuoloog, Relatiecoach, workshopleider, Trainer, theatermaker & Educatief Cabaretier. Voorvechter van gezonde seksualiteit & Relaties.</p>
                 </div>
                 
                 <div class="footer-column">
@@ -887,6 +940,7 @@
                         <li style="margin-bottom: 0.8rem;"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#diensten" style="color: white; text-decoration: none;">Diensten</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#video's" style="color: white; text-decoration: none;">Video's</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#activiteiten" style="color: white; text-decoration: none;">Activiteiten</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#over" style="color: white; text-decoration: none;">Over Mij</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#afspraak" style="color: white; text-decoration: none;">Contact</a></li>
                     </ul>
@@ -895,7 +949,6 @@
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Praktijk Amsterdam Centrum</p>
                         <p><i class="fas fa-phone"></i> 020-1234567</p>
                         <p><i class="fas fa-envelope"></i> info@maikelroseval.nl</p>
                     </div>
@@ -924,24 +977,24 @@
             <h2>Mijn Media Projecten</h2>
             
             <div style="margin: 2rem 0;">
-                <h3 style="color: var(--accent-color);">TikTok - @mikeroseval</h3>
+                <h3 style="color: var(--accent-color);">Seksuele Communicatie</h3>
                 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1rem 0;">
-                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/SPlGD-iuUmw" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p>Op mijn TikTok-kanaal deel ik korte, informatieve video's over seksuele gezondheid, relatieadvies en het doorbreken van taboes. Met meer dan 50.000 volgers bereik ik een breed publiek met toegankelijke informatie.</p>
-                <a href="https://www.tiktok.com/@mikeroseval" target="_blank" class="btn" style="background-color: #000; margin-top: 1rem;">
-                    <i class="fab fa-tiktok"></i> Volg mij op TikTok
+                <p>In deze video bespreek ik hoe je effectief kunt communiceren over seksualiteit met je partner, wat essentieel is voor een gezond seksleven.</p>
+                <a href="https://youtu.be/SPlGD-iuUmw" target="_blank" class="btn" style="background-color: #FF0000; margin-top: 1rem;">
+                    <i class="fab fa-youtube"></i> Bekijk op YouTube
                 </a>
             </div>
             
             <div style="margin: 2rem 0;">
-                <h3 style="color: var(--accent-color);">Facebook - Maikel Roseval</h3>
+                <h3 style="color: var(--accent-color);">Seksuele Voorlichting</h3>
                 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1rem 0;">
-                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/AMLvSqUT0Z8" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p>Op mijn Facebook-pagina deel ik uitgebreidere artikelen, live Q&A's en discussies over actuele onderwerpen rond seksualiteit en relaties.</p>
-                <a href="https://www.facebook.com/maikel.roseval/?locale=nl_NL" target="_blank" class="btn" style="background-color: #4267B2; margin-top: 1rem;">
-                    <i class="fab fa-facebook-f"></i> Volg mij op Facebook
+                <p>Een informatieve video over belangrijke aspecten van seksuele gezondheid en hoe je hierover open kunt communiceren.</p>
+                <a href="https://youtu.be/AMLvSqUT0Z8" target="_blank" class="btn" style="background-color: #FF0000; margin-top: 1rem;">
+                    <i class="fab fa-youtube"></i> Bekijk op YouTube
                 </a>
             </div>
         </div>
