@@ -593,6 +593,7 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            position: relative;
         }
 
         .activity-card:hover {
@@ -601,8 +602,35 @@
 
         .activity-card img {
             width: 100%;
-            height: auto;
+            height: 250px;
+            object-fit: cover;
             display: block;
+        }
+
+        .activity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .activity-card:hover .activity-overlay {
+            opacity: 1;
+        }
+
+        .activity-overlay h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .activity-overlay p {
+            margin: 0;
+            font-size: 0.9rem;
         }
 
         /* Certificaten sectie */
@@ -644,6 +672,46 @@
             color: var(--primary-color);
             font-size: 0.9rem;
         }
+
+        /* Tabs voor activiteiten */
+        .tabs-container {
+            margin-bottom: 3rem;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .tab-item {
+            margin: 0 1rem;
+        }
+
+        .tab-link {
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab-link:hover, .tab-link.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
         
         /* Responsive */
         @media (max-width: 992px) {
@@ -659,6 +727,31 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+            flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                padding: 1rem 0;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: block;
+                font-size: 1.5rem;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
             }
             
             .hero {
@@ -702,6 +795,17 @@
 
             .certificate-item {
                 max-width: 120px;
+            }
+
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab-item {
+                margin: 0.5rem 0;
+                width: 100%;
+                text-align: center;
             }
         }
         
@@ -754,12 +858,16 @@
                     <img src="https://files.catbox.moe/cv7bnb.jpg" alt="Maikel Roseval">
                     Maikel Roseval
                 </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#diensten">Diensten</a></li>
                     <li><a href="#video's">Video's</a></li>
                     <li><a href="#over">Over Mij</a></li>
-                    <li><a href="#activiteiten">Activiteiten</a></li>
+                    <li><a href="#trainingen">Trainingen</a></li>
+                    <li><a href="#theater">Theater</a></li>
                     <li><a href="#afspraak">Afspraak</a></li>
                     <li><a href="#" id="film-link">Mijn Werk</a></li>
                 </ul>
@@ -784,7 +892,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Mijn Diensten</h2>
-                <p>Professionele begeleiding op het gebied van seksualiteit en relaties</p>
+                <p>Professionele begeleiding op het gebied van seksualiteit и relaties</p>
             </div>
             
             <div class="services">
@@ -810,31 +918,7 @@
                 </div>
                 <div class="service-card">
                     <h3>Seksuele opvoeding</h3>
-                    <p>Begeleiding voor ouders en verzorgers in hoe ze met hun kinderen kunnen praten over seksualiteit en seksuele gezondheid.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Zelfbeeld en hechtingsproblemen</h3>
-                    <p>Begeleiding bij problemen met zelfbeeld en hechtingsproblemen in relaties, waardoor je meer zelfvertrouwen krijgt en gezonde relaties kunt opbouwen.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Gender issues</h3>
-                    <p>Ondersteuning bij vragen over genderidentiteit en genderexpressie, inclusief begeleiding tijdens transitieprocessen.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Bespreekbaar maken van seksualiteit</h3>
-                    <p>Begeleiding voor jongeren en hun ouders/verzorgers in het bespreekbaar maken van seksualiteit op een gezonde en respectvolle manier.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Positieve communicatie in relaties</h3>
-                    <p>Training in effectieve communicatietechnieken voor stellen om conflicten te verminderen en intimiteit te vergroten.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Beoordelen van seksueel gedrag</h3>
-                    <p>Professionele beoordeling van seksueel gedrag en advies over gezond seksueel functioneren.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Fysiek en geestelijk geweld in relaties</h3>
-                    <p>Begeleiding voor slachtoffers en daders van relationeel geweld, gericht op herstel en het doorbreken van destructieve patronen.</p>
+                    <p>Begeleiding voor ouders en verzorgers in hoe ze met ihren kinderen kunnen praten over seksualiteit en seksuele gezondheid.</p>
                 </div>
             </div>
         </div>
@@ -874,36 +958,76 @@
         </div>
     </section>
 
-    <section id="activiteiten">
+    <section id="trainingen">
         <div class="container">
             <div class="section-title">
-                <h2>Mijn Activiteiten</h2>
-                <p>Workshops, trainingen en publieke optredens</p>
+                <h2>Trainingen & Workshops</h2>
+                <p>Professionele trainingen en workshops op het gebied van seksualiteit en relaties</p>
             </div>
 
             <div class="activities-feed">
                 <div class="activity-card">
-                    <img src="https://files.catbox.moe/l3pt0c.jpg" alt="Workshop over gezonde relaties">
-                </div>
-                <div class="activity-card">
-                    <img src="https://files.catbox.moe/g6wyix.jpg" alt="Training voor professionals">
-                </div>
-                <div class="activity-card">
-                    <img src="https://files.catbox.moe/rzvppx.jpg" alt="Publiek optreden over seksuele gezondheid">
-                </div>
-                <div class="activity-card">
                     <img src="https://files.catbox.moe/9a5jev.jpg" alt="Workshop over communicatie in relaties">
+                    <div class="activity-overlay">
+                        <h3>Communicatieworkshop</h3>
+                        <p>Leer effectief communiceren over intimiteit en relaties</p>
+                    </div>
                 </div>
                 <div class="activity-card">
                     <img src="https://files.catbox.moe/8w3ze3.jpg" alt="Training over genderidentiteit">
+                    <div class="activity-overlay">
+                        <h3>Gender & Identiteit</h3>
+                        <p>Training over genderdiversiteit en identiteitsvraagstukken</p>
+                    </div>
                 </div>
                 <div class="activity-card">
-                    <img src="https://files.catbox.moe/nccbye.jpg" alt="Theateroptreden over seksuele gezondheid">
+                    <img src="https://files.catbox.moe/nccbye.jpg" alt="Workshop over seksuele gezondheid">
+                    <div class="activity-overlay">
+                        <h3>Seksuele Gezondheid</h3>
+                        <p>Workshop over het bevorderen van seksueel welzijn</p>
+                    </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="#afspraak" class="btn">Vraag informatie aan</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="theater" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Theater</h2>
+                <p>Educatief cabaret en theaterproducties over seksualiteit en relaties</p>
+            </div>
+
+            <div class="activities-feed">
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/l3pt0c.jpg" alt="Theateroptreden over gezonde relaties">
+                    <div class="activity-overlay">
+                        <h3>Relaties op het toneel</h3>
+                        <p>Educatief cabaret over communicatie in relaties</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/g6wyix.jpg" alt="Theaterworkshop voor professionals">
+                    <div class="activity-overlay">
+                        <h3>Professionele Training</h3>
+                        <p>Theaterworkshops voor zorgprofessionals</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/rzvppx.jpg" alt="Publiek optreden over seksuele gezondheid">
+                    <div class="activity-overlay">
+                        <h3>Seksuele Voorlichting</h3>
+                        <p>Theatervoorstelling over seksuele gezondheid</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#afspraak" class="btn">Boek een voorstelling</a>
             </div>
         </div>
     </section>
@@ -1036,6 +1160,7 @@
                                     <option value="vraag">Vraag over behandeling</option>
                                     <option value="workshop">Workshop informatie</option>
                                     <option value="training">Training informatie</option>
+                                    <option value="theater">Theater booking</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -1064,7 +1189,8 @@
                         <li style="margin-bottom: 0.8rem;"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#diensten" style="color: white; text-decoration: none;">Diensten</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#video's" style="color: white; text-decoration: none;">Video's</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="#activiteiten" style="color: white; text-decoration: none;">Activiteiten</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#trainingen" style="color: white; text-decoration: none;">Trainingen</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#theater" style="color: white; text-decoration: none;">Theater</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#over" style="color: white; text-decoration: none;">Over Mij</a></li>
                         <li style="margin-bottom: 0.8rem;"><a href="#afspraak" style="color: white; text-decoration: none;">Contact</a></li>
                     </ul>
@@ -1174,6 +1300,14 @@
             } else {
                 header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.2)';
             }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
