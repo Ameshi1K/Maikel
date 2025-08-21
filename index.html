@@ -11,37 +11,47 @@
             --accent-color: #FFD700; /* Gouden accent */
             --light-color: #f8f9fa;
             --dark-color: #1A1A1A;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         
         body {
             font-family: 'Montserrat', 'Segoe UI', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
             color: #333;
             background-color: #FAFAFA;
+            overflow-x: hidden;
         }
         
+        /* Improved header with better shadow and animation */
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 1rem 0;
+            padding: 0;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+            transition: var(--transition);
         }
         
         .container {
             width: 85%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 15px;
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
         
         .logo {
@@ -74,8 +84,9 @@
             color: white;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: var(--transition);
             padding: 5px 0;
+            position: relative;
         }
         
         .nav-links a:hover {
@@ -97,14 +108,17 @@
             width: 100%;
         }
         
+        /* Improved hero section */
         .hero {
             background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://files.catbox.moe/xkdybj.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
             text-align: center;
-            padding: 8rem 0;
+            padding: 10rem 0;
             position: relative;
+            overflow: hidden;
         }
         
         .hero::before {
@@ -122,6 +136,7 @@
         .hero-content {
             position: relative;
             z-index: 2;
+            animation: fadeIn 1s ease;
         }
         
         .hero h1 {
@@ -129,6 +144,7 @@
             margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero h1 span {
@@ -151,10 +167,27 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            transition: all 0.3s;
+            transition: var(--transition);
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
         }
         
         .btn:hover {
@@ -193,6 +226,12 @@
             margin-bottom: 1.5rem;
         }
         
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
         .section-title::after {
             content: '';
             display: block;
@@ -213,7 +252,7 @@
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             padding: 2.5rem;
-            transition: all 0.4s;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -264,7 +303,7 @@
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             overflow: hidden;
-            transition: all 0.4s;
+            transition: var(--transition);
         }
         
         .video-card:hover {
@@ -322,7 +361,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-family: inherit;
-            transition: all 0.3s;
+            transition: var(--transition);
         }
         
         .form-group input:focus,
@@ -335,6 +374,7 @@
         
         .form-group textarea {
             height: 150px;
+            resize: vertical;
         }
         
         footer {
@@ -401,7 +441,7 @@
             color: white;
             border-radius: 50%;
             font-size: 1.2rem;
-            transition: all 0.3s;
+            transition: var(--transition);
         }
         
         .social-links a:hover {
@@ -460,7 +500,7 @@
             font-size: 2.5rem;
             cursor: pointer;
             color: var(--accent-color);
-            transition: all 0.3s;
+            transition: var(--transition);
         }
         
         .close-modal:hover {
@@ -572,7 +612,7 @@
             border-radius: 50%;
             text-align: center;
             line-height: 40px;
-            transition: all 0.3s;
+            transition: var(--transition);
         }
         
         .expert-social a:hover {
@@ -580,7 +620,7 @@
             transform: translateY(-3px);
         }
 
-        /* Activiteiten Feed */
+        /* Activiteiten Feed - Fixed image consistency */
         .activities-feed {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -594,6 +634,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
             position: relative;
+            height: 350px; /* Fixed height for consistency */
         }
 
         .activity-card:hover {
@@ -602,8 +643,8 @@
 
         .activity-card img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: 100%; /* Fill the container */
+            object-fit: cover; /* Ensure consistent cropping */
             display: block;
         }
 
@@ -631,6 +672,17 @@
         .activity-overlay p {
             margin: 0;
             font-size: 0.9rem;
+        }
+
+        /* Theater section improvements */
+        .theater-description {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         /* Certificaten sectie */
@@ -697,7 +749,7 @@
             color: var(--dark-color);
             font-weight: 600;
             border-bottom: 3px solid transparent;
-            transition: all 0.3s;
+            transition: var(--transition);
         }
 
         .tab-link:hover, .tab-link.active {
@@ -711,6 +763,16 @@
 
         .tab-content.active {
             display: block;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
         }
         
         /* Responsive */
@@ -727,13 +789,14 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
-            flex-direction: column;
+                flex-direction: column;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
                 background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
                 padding: 1rem 0;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             }
             
             .nav-links.active {
@@ -756,6 +819,7 @@
             
             .hero {
                 padding: 6rem 0;
+                background-attachment: scroll;
             }
             
             .hero h1 {
@@ -807,6 +871,10 @@
                 width: 100%;
                 text-align: center;
             }
+
+            .activity-card {
+                height: 300px; /* Adjusted for mobile */
+            }
         }
         
         @media (max-width: 576px) {
@@ -838,6 +906,10 @@
 
             .certificate-logo {
                 height: 60px;
+            }
+
+            .activity-card {
+                height: 250px; /* Adjusted for small mobile */
             }
         }
     </style>
@@ -892,7 +964,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Mijn Diensten</h2>
-                <p>Professionele begeleiding op het gebied van seksualiteit и relaties</p>
+                <p>Professionele begeleiding op het gebied van seksualiteit en relaties</p>
             </div>
             
             <div class="services">
@@ -914,11 +986,11 @@
                 </div>
                 <div class="service-card">
                     <h3>Seksuele communicatie</h3>
-                    <p>Ik help stellen om effectiever te communiceren over hun seksuele wensen en grenzen, wat kan leiden tot meer wederzijds begrip en tevredenheid.</p>
+                    <p>Ik help stellen om effectiever te communiceren over hun seksuele wensen en grenzen, wat kan leiden tot meer wederzijds begrip and tevredenheid.</p>
                 </div>
                 <div class="service-card">
                     <h3>Seksuele opvoeding</h3>
-                    <p>Begeleiding voor ouders en verzorgers in hoe ze met ihren kinderen kunnen praten over seksualiteit en seksuele gezondheid.</p>
+                    <p>Begeleiding voor ouders en verzorgers in hoe ze met hun kinderen kunnen praten over seksualiteit en seksuele gezondheid.</p>
                 </div>
             </div>
         </div>
@@ -1005,7 +1077,13 @@ Fysieke en geestelijk geweld in relaties</p>
         <div class="container">
             <div class="section-title">
                 <h2>Theater</h2>
-                <p>De Naakte Waarheid Over Seksualiteit kan getypeerd worden als een frisse en vernieuwende benadering voor het bespreken van  gezonde seksualiteit op een humoristische manier . Het is  een viering van seksuele gezondheid en openheid, verpakt in een theater show vol  interactie entertainment en humor , aangevuld met  anekdotes en ervaringsverhalen over misvattingen en onwetendheid op het gebied van seksualiteit. Zijn expertise in Seksuologie, Relatie Coaching en Acceptant and Commitment Therapie geeft hem de  mogelijkheid zijn shows tot een sensationele cocktail te maken</p>
+                <p>De Naakte Waarheid Over Seksualiteit kan getypeerd worden als een frisse en vernieuwende benadering voor het bespreken van gezonde seksualiteit op een humoristische manier.</p>
+            </div>
+            
+            <div class="theater-description">
+                <p>In Switi Lobi Tori neemt relatiecoach en seksuoloog Mike Roseval je mee in een interactieve én educatieve theatershow over liefde, overspel en alles wat we liever niet durven uitspreken. Met veel humor, scherpe inzichten en een flinke dosis interactie legt hij de vinger op de zere plek: waarom praten we zo moeilijk over wat er écht speelt in onze relaties?</p>
+                <p>In deze unieke voorstelling worden onderwerpen als emotionele afstand, communicatieproblemen en ontrouw niet alleen bespreekbaar gemaakt, maar ook op een frisse, luchtige en soms confronterende manier belicht. Je wordt aan het denken gezet en gaat met een glimlach naar huis.</p>
+                <p>Het is een viering van seksuele gezondheid en openheid, verpakt in een theater show vol interactie entertainment en humor, aangevuld met anekdotes en ervaringsverhalen over misvattingen en onwetendheid op het gebied van seksualiteit. Zijn expertise in Seksuologie, Relatie Coaching en Acceptant and Commitment Therapie geeft hem de mogelijkheid zijn shows tot een sensationele cocktail te maken.</p>
             </div>
 
             <div class="activities-feed">
@@ -1023,12 +1101,6 @@ Fysieke en geestelijk geweld in relaties</p>
                         <p>Theaterworkshops voor zorgprofessionals</p>
                     </div>
                 </div>
-                    <section id="theater" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="section-title">
-                <p>In Switi Lobi Tori neemt relatiecoach en seksuoloog Mike Roseval je mee in een interactieve én educatieve theatershow over liefde, overspel en alles wat we liever niet durven uitspreken. Met veel humor, scherpe inzichten en een flinke dosis interactie legt hij de vinger op de zere plek: waarom praten we zo moeilijk over wat er écht speelt in onze relaties?
-In deze unieke voorstelling worden onderwerpen als emotionele afstand, communicatieproblemen en ontrouw niet alleen bespreekbaar gemaakt, maar ook op een frisse, luchtige en soms confronterende manier belicht. Je wordt aan het denken gezet en gaat met een glimlach naar huis</p>
-            </div>
                 <div class="activity-card">
                     <img src="https://files.catbox.moe/rzvppx.jpg" alt="Publiek optreden over seksuele gezondheid">
                     <div class="activity-overlay">
@@ -1057,7 +1129,7 @@ In deze unieke voorstelling worden onderwerpen als emotionele afstand, communica
                     <h3>Maikel Roseval</h3>
                     <p>Gediplomeerd seksuoloog, Relatiecoach, workshopleider, Trainer, theatermaker & Educatief Cabaretier. Voorvechter van gezonde seksualiteit & Relaties.</p>
                     <p>Register aantekening 228545
-Wetenschappelijke vereniging voor Seksuologie.</p>
+Wetenschappelijke vereniging voor Seksuologie.</p>
                     
 <div class="certificates">
     <div class="section-title">
@@ -1323,6 +1395,25 @@ Wetenschappelijke vereniging voor Seksuologie.</p>
         
         menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
