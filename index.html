@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maikel Roseval | Seksuoloog & Relatietherapeut</title>
     <style>
+        /* ===== YOUR ORIGINAL STYLES (kept intact) ===== */
         :root {
-            --primary-color: #9E1F32;
-            --secondary-color: #E83D6F;
-            --accent-color: #FFD700;
+            --primary-color: #9E1F32; /* Diepe roze/rood */
+            --secondary-color: #E83D6F; /* Felroze */
+            --accent-color: #FFD700; /* Gouden accent */
             --light-color: #f8f9fa;
             --dark-color: #1A1A1A;
             --transition: all 0.3s ease;
         }
-
+        
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
+        
         body {
             font-family: 'Montserrat', 'Segoe UI', sans-serif;
             line-height: 1.6;
@@ -27,7 +28,7 @@
             background-color: #FAFAFA;
             overflow-x: hidden;
         }
-
+        
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
@@ -38,28 +39,28 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.2);
             transition: var(--transition);
         }
-
+        
         .container {
             width: 85%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-
+        
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
         }
-
+        
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
             display: flex;
             align-items: center;
         }
-
+        
         .logo img {
             height: 50px;
             width: 50px;
@@ -68,17 +69,17 @@
             border-radius: 50%;
             border: 3px solid var(--accent-color);
         }
-
+        
         .nav-links {
             display: flex;
             list-style: none;
         }
-
+        
         .nav-links li {
             margin-left: 2rem;
             position: relative;
         }
-
+        
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -87,11 +88,11 @@
             padding: 5px 0;
             position: relative;
         }
-
+        
         .nav-links a:hover {
             color: var(--accent-color);
         }
-
+        
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -102,13 +103,13 @@
             background-color: var(--accent-color);
             transition: width 0.3s;
         }
-
+        
         .nav-links a:hover::after {
             width: 100%;
         }
-
+        
         .hero {
-            background: linear-gradient(rgba(26,26,26,0.7), rgba(26,26,26,0.7)), url('https://files.catbox.moe/xkdybj.jpg');
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://files.catbox.moe/xkdybj.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -118,7 +119,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
@@ -130,13 +131,13 @@
             background-size: cover;
             z-index: 1;
         }
-
+        
         .hero-content {
             position: relative;
             z-index: 2;
             animation: fadeIn 1s ease;
         }
-
+        
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
@@ -144,18 +145,18 @@
             letter-spacing: 2px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-
+        
         .hero h1 span {
             color: var(--accent-color);
         }
-
+        
         .hero p {
             font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto 3rem;
             font-weight: 300;
         }
-
+        
         .btn {
             display: inline-block;
             background-color: var(--accent-color);
@@ -172,7 +173,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .btn::before {
             content: '';
             position: absolute;
@@ -183,39 +184,39 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: 0.5s;
         }
-
+        
         .btn:hover::before {
             left: 100%;
         }
-
+        
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             background-color: #FFC600;
         }
-
+        
         .btn-secondary {
             background-color: transparent;
             color: white;
             border: 2px solid white;
             margin-left: 15px;
         }
-
+        
         .btn-secondary:hover {
             background-color: rgba(255,255,255,0.1);
         }
-
+        
         section {
             padding: 6rem 0;
             position: relative;
         }
-
+        
         .section-title {
             text-align: center;
             margin-bottom: 4rem;
             position: relative;
         }
-
+        
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -223,13 +224,13 @@
             letter-spacing: 3px;
             margin-bottom: 1.5rem;
         }
-
+        
         .section-title p {
             max-width: 700px;
             margin: 0 auto;
             font-size: 1.1rem;
         }
-
+        
         .section-title::after {
             content: '';
             display: block;
@@ -238,13 +239,13 @@
             background: var(--accent-color);
             margin: 0 auto;
         }
-
+        
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
         }
-
+        
         .service-card {
             background-color: white;
             border-radius: 10px;
@@ -255,7 +256,7 @@
             overflow: hidden;
             z-index: 1;
         }
-
+        
         .service-card::before {
             content: '';
             position: absolute;
@@ -265,12 +266,12 @@
             height: 5px;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
         }
-
+        
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
-
+        
         .service-card h3 {
             color: var(--primary-color);
             margin-top: 0;
@@ -278,7 +279,7 @@
             margin-bottom: 1.5rem;
             position: relative;
         }
-
+        
         .service-card h3::after {
             content: '';
             position: absolute;
@@ -288,24 +289,566 @@
             height: 3px;
             background-color: var(--accent-color);
         }
+        
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .video-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .video-card iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 2rem;
+        }
+        
+        .video-info h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+        
+        .video-info .btn {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .appointment-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(232, 61, 111, 0.2);
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--dark-color), #2A2A2A);
+            color: white;
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%231A1A1A"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%231A1A1A"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231A1A1A"/></svg>');
+            background-size: cover;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .social-links li {
+            margin-right: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            position: relative;
+            margin: 5% auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 900px;
+            background-color: var(--dark-color);
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            transform: rotate(90deg);
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 6rem;
+            color: rgba(158, 31, 50, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 2rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+            margin-right: 15px;
+        }
+        
+        .emergency-banner {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 101;
+        }
+        
+        .expert-section {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+        
+        .expert-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        
+        .expert-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .expert-info h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+        }
+        
+        .expert-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .expert-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: var(--transition);
+        }
+        
+        .expert-social a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
 
-        /* Video, expert, certificates, tabs, theater, form, footer, etc. styles remain unchanged */
-        /* ... keep your previous CSS for brevity ... */
+        .activities-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .activity-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            position: relative;
+            height: 350px;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .activity-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .activity-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .activity-card:hover .activity-overlay {
+            opacity: 1;
+        }
+
+        .activity-overlay h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .activity-overlay p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .theater-description {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .certificates {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .certificates-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .certificate-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 150px;
+            text-align: center;
+        }
+
+        .certificate-logo {
+            height: 80px;
+            width: auto;
+            margin-bottom: 1rem;
+            object-fit: contain;
+        }
+
+        .certificate-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .tabs-container {
+            margin-bottom: 3rem;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .tab-item {
+            margin: 0 1rem;
+        }
+
+        .tab-link {
+            padding: 1rem 2rem;
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .tab-link:hover, .tab-link.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+        
+        .promo-video {
+            margin: 4rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .promo-video h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .promo-video video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .theater-header-image {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.8rem; }
+            .section-title h2 { font-size: 2rem; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                padding: 1rem 0;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            }
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 0.5rem 0; text-align: center; }
+            .menu-toggle { display: block; font-size: 1.5rem; color: white; background: none; border: none; cursor: pointer; }
+            .hero { padding: 6rem 0; background-attachment: scroll; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .btn-container { display: flex; flex-direction: column; }
+            .btn-secondary { margin-left: 0; margin-top: 15px; }
+            .section { padding: 4rem 0; }
+            .expert-section { flex-direction: column; gap: 2rem; }
+            .expert-image { max-width: 350px; }
+            .certificates-container { gap: 2rem; }
+            .certificate-item { max-width: 120px; }
+            .tabs { flex-direction: column; align-items: center; }
+            .tab-item { margin: 0.5rem 0; width: 100%; text-align: center; }
+            .activity-card { height: 300px; }
+            .theater-header-image { margin-bottom: 2rem; }
+        }
+        
+        @media (max-width: 576px) {
+            .container { width: 90%; }
+            .hero h1 { font-size: 1.8rem; }
+            .video-container { grid-template-columns: 1fr; }
+            .logo { font-size: 1.5rem; }
+            .logo img { height: 40px; width: 40px; margin-right: 10px; }
+            .certificate-item { max-width: 100px; }
+            .certificate-logo { height: 60px; }
+            .activity-card { height: 250px; }
+        }
     </style>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <!-- Emergency Banner -->
     <div class="emergency-banner">
         <div class="container">
             Noodcontact: Bel 112 bij acuut gevaar. Voor crisisopvang: 0900-0113 (24/7 bereikbaar)
         </div>
     </div>
-
-    <!-- Header and navigation -->
+    
     <header>
         <div class="container">
             <nav>
@@ -329,13 +872,12 @@
             </nav>
         </div>
     </header>
-
-    <!-- Hero section -->
+    
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="container">
                 <h1>Maikel <span>Roseval</span></h1>
-                <p>Gediplomeerd Seksuoloog, Relatiecoach, Workshopleider, Trainer, Theatermaker & Educatief Cabaretier. Voorvechter van gezonde Seksualiteit & Relaties.</p>
+                <p>Gediplomeerd Seksuoloog, Relatiecoach, Workshopleider, Trainer, Theatermaker & Educatief Cabaretier. Voorvechter van gezonde Seksualiteit & Relaties.</p>
                 <div class="btn-container">
                     <a href="#afspraak" class="btn">Direct Afspraak Maken</a>
                     <a href="#video's" class="btn btn-secondary">Bekijk Mijn Video's</a>
@@ -343,8 +885,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Promo video -->
+    
     <div class="container">
         <div class="promo-video">
             <h3>Korte Maikel Roseval Interview</h3>
@@ -355,117 +896,513 @@
             <img src="https://files.catbox.moe/fndjx2.jpg" alt="Maikel Roseval Interview" style="width: 100%; border-radius: 10px; margin-top: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
         </div>
     </div>
-
-    <!-- Diensten, Video's, Over, Trainingen, Theater sections ... (keep your previous HTML) -->
-
-    <!-- Afspraak form -->
+    
+    <section id="diensten">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mijn Diensten</h2>
+                <p>Professionele begeleiding op het gebied van seksualiteit and relaties</p>
+            </div>
+            
+            <div class="services">
+                <div class="service-card">
+                    <h3>Sekscounseling</h3>
+                    <p>Een methode van kortdurende hulpverlening (gemiddeld 5-10 gesprekken) gericht op het opheffen van de seksuele klacht. Dit betekent meestal het verbeteren van de seksuele beleving en/of het seksueel functioneren. Mijn doel is om partners weer te kunnen laten genieten van ihrem seksleven.</p>
+                    <video controls style="width: 100%; border-radius: 8px; margin-top: 15px;">
+                        <source src="https://files.catbox.moe/etclz4.mp4" type="video/mp4">
+                        Uw browser ondersteunt deze video niet.
+                    </video>
+                </div>
+                <div class="service-card">
+                    <h3>Seksuele disfuncties</h3>
+                    <p>Dit kan variëren van erectiestoornissen en voortijdige ejaculatie bij mannen tot vaginisme (pijn bij penetratie) en problemen met seksueel verlangen bij vrouwen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Problemen met seksueel verlangen</h3>
+                    <p>Dit kan te maken hebben met een laag libido, verschillen in seksueel verlangen tussen partners, of veranderingen in seksueel verlangen door levensveranderingen zoals zwangerschap, menopauze of ziekte.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Pijn bij het vrijen</h3>
+                    <p>Dit kan veroorzaakt worden door medische aandoeningen, hormonale veranderingen of psychologische factoren.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Seksueel trauma</h3>
+                    <p>Dit omvat hulp bij het verwerken van seksueel misbruik, aanranding of andere traumatische ervaringen die invloed hebben op de seksuele gezondheid.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Relatieproblemen</h3>
+                    <p>Seksualiteit is vaak verbonden met relatieproblemen. Ik help stellen om hun communicatie te verbeteren, vertrouwen te herstellen en intimiteit te bevorderen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Genderidentiteit en seksuele geaardheid</h3>
+                    <p>Ondersteuning bij vragen over genderidentiteit, coming-out, en het accepteren van je eigen seksuele geaardheid.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Seksuele voorlichting</h3>
+                    <p>Educatie over seksuele gezondheid, anticonceptie, soa's en veilig vrijen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="video's" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Video's</h2>
+                <p>Educatieve content over seksualiteit en relaties</p>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Seksuele Communicatie in Relaties</h3>
+                        <p>Leer hoe je effectief kunt communiceren over seksualiteit met je partner.</p>
+                        <a href="#" class="btn">Bekijk Video</a>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Mythen over Seksualiteit Ontkracht</h3>
+                        <p>Veelvoorkomende misvattingen over seksualiteit uitgelegd.</p>
+                        <a href="#" class="btn">Bekijk Video</a>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+                    <div class="video-info">
+                        <h3>Intimiteit Versterken in je Relatie</h3>
+                        <p>Praktische tips om de intimiteit met je partner te verdiepen.</p>
+                        <a href="#" class="btn">Bekijk Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="over">
+        <div class="container">
+            <div class="section-title">
+                <h2>Over Mij</h2>
+                <p>Mijn achtergrond en expertise in seksuologie</p>
+            </div>
+            
+            <div class="expert-section">
+                <img src="https://files.catbox.moe/9i6x8r.jpg" alt="Maikel Roseval" class="expert-image">
+                <div class="expert-info">
+                    <h3>Gediplomeerd Seksuoloog & Relatietherapeut</h3>
+                    <p>Mijn naam is Maikel Roseval en ik ben een gediplomeerd seksuoloog en relatietherapeut met meer dan 15 jaar ervaring in het begeleiden van individuen en stellen bij seksuele en relationele uitdagingen.</p>
+                    <p>Mijn aanpak is praktisch, oplossingsgericht en cliëntvriendelijk. Ik geloof dat een gezonde seksualiteit bijdraagt aan algeheel welzijn en geluk in relaties.</p>
+                    <p>Naast mijn praktijk ben ik actief als workshopleider, trainer en theatermaker op het gebied van seksuele voorlichting en relationele vorming.</p>
+                    
+                    <div class="expert-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certificates">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Mijn Certificeringen</h3>
+                <div class="certificates-container">
+                    <div class="certificate-item">
+                        <img src="https://via.placeholder.com/100x100?text=NVVS" alt="NVVS" class="certificate-logo">
+                        <p class="certificate-name">NVVS Gecertificeerd</p>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="https://via.placeholder.com/100x100?text=KNMT" alt="KNMT" class="certificate-logo">
+                        <p class="certificate-name">Kwaliteitsregister</p>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="https://via.placeholder.com/100x100?text=RBOS" alt="RBOS" class="certificate-logo">
+                        <p class="certificate-name">RBOS Erkend</p>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="https://via.placeholder.com/100x100?text=NVG" alt="NVG" class="certificate-logo">
+                        <p class="certificate-name">NVG Therapeut</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="trainingen" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trainingen & Workshops</h2>
+                <p>Interactieve sessies voor groepen en organisaties</p>
+            </div>
+            
+            <div class="tabs-container">
+                <ul class="tabs">
+                    <li class="tab-item"><a href="#trainingen" class="tab-link active" data-tab="voorlichting">Seksuele Voorlichting</a></li>
+                    <li class="tab-item"><a href="#trainingen" class="tab-link" data-tab="communicatie">Relationele Communicatie</a></li>
+                    <li class="tab-item"><a href="#trainingen" class="tab-link" data-tab="diversiteit">Seksuele Diversiteit</a></li>
+                </ul>
+                
+                <div class="tab-content active" id="voorlichting">
+                    <div class="services">
+                        <div class="service-card">
+                            <h3>Jongeren & Seksualiteit</h3>
+                            <p>Interactieve workshops voor jongeren over gezonde seksuele ontwikkeling, grenzen aangeven en veilig vrijen. Geschikt voor scholen en jeugdinstellingen.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Ouders & Seksuele Opvoeding</h3>
+                            <p>Praktische training voor ouders over hoe ze met hun kinderen kunnen praten over seksualiteit en relaties.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="communicatie">
+                    <div class="services">
+                        <div class="service-card">
+                            <h3>Communicatie in Relaties</h3>
+                            <p>Workshops voor stellen over effectieve communicatie, conflictresolutie en het behouden van intimiteit in langdurige relaties.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Teamrelaties op de Werkvloer</h3>
+                            <p>Training voor organisaties over professionele omgangsvormen, grenzen en communicatie op de werkvloer.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="diversiteit">
+                    <div class="services">
+                        <div class="service-card">
+                            <h3>LHBTQ+ Sensitiviteit</h3>
+                            <p>Training voor professionals over seksuele diversiteit, genderidentiteit en inclusieve hulpverlening.</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>Diversiteit in Seksualiteit</h3>
+                            <p>Educatieve sessies over de brede spectrum van seksuele orientaties, voorkeuren en praktijken.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="theater">
+        <div class="container">
+            <div class="section-title">
+                <h2>Theater & Educatief Cabaret</h2>
+                <p>Seksuele voorlichting op een toegankelijke en entertainende manier</p>
+            </div>
+            
+            <img src="https://files.catbox.moe/3t2q3u.jpg" alt="Maikel Roseval Theater" class="theater-header-image">
+            
+            <div class="theater-description">
+                <p>Als educatief cabaretier combineer ik theater met seksuele voorlichting om moeilijke onderwerpen bespreekbaar te maken op een luchtige en toegankelijke manier. Mijn voorstellingen zijn geschikt voor diverse doelgroepen, van jongeren tot volwassenen, en kunnen worden ingezet op scholen, bij evenementen of in theaters.</p>
+                
+                <p>Door humor en herkenbare situaties te gebruiken, slaag ik erin om het publiek te entertainen terwijl ik belangrijke boodschappen over seksuele gezondheid en relaties overbreng. Na elke voorstelling is er ruimte voor vragen en discussie.</p>
+            </div>
+            
+            <div class="activities-feed">
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/8s8q5x.jpg" alt="Theateroptreden 1">
+                    <div class="activity-overlay">
+                        <h3>Seks & De Stad</h3>
+                        <p>Educatieve voorstelling over seksualiteit in de moderne wereld</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/9i6x8r.jpg" alt="Theateroptreden 2">
+                    <div class="activity-overlay">
+                        <h3>Liefde in Tijden van Tinder</h3>
+                        <p>Humoristische kijk op relaties in het digitale tijdperk</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <img src="https://files.catbox.moe/cv7bnb.jpg" alt="Theateroptreden 3">
+                    <div class="activity-overlay">
+                        <h3>Praatjes & Praatjes</h3>
+                        <p>Interactieve voorstelling over communicatie in relaties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AFSPRAAK SECTIE met DISCORD WEBHOOK -->
     <section id="afspraak" style="background-color: #f9f9f9;">
         <div class="container">
             <div class="section-title">
                 <h2>Afspraak Maken</h2>
                 <p>Plan een consult of vraag informatie aan</p>
             </div>
-
+            
             <div class="appointment-form">
                 <form id="appointmentForm">
                     <div class="form-group">
-                        <label for="name">Naam</label>
+                        <label for="name">Naam *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="email">E-mailadres</label>
+                        <label for="email">E-mailadres *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="phone">Telefoonnummer</label>
                         <input type="tel" id="phone" name="phone">
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="service">Gewenste Dienst</label>
+                        <label for="service">Gewenste Dienst *</label>
                         <select id="service" name="service" required>
                             <option value="">Selecteer een dienst</option>
-                            <option value="counseling">Sekscounseling</option>
-                            <option value="therapy">Relatietherapie</option>
-                            <option value="workshop">Workshop/Training</option>
-                            <option value="performance">Theateroptreden</option>
-                            <option value="consultation">Consultatie</option>
+                            <option value="Sekscounseling">Sekscounseling</option>
+                            <option value="Relatietherapie">Relatietherapie</option>
+                            <option value="Workshop/Training">Workshop/Training</option>
+                            <option value="Theateroptreden">Theateroptreden</option>
+                            <option value="Consultatie">Consultatie</option>
                         </select>
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="date">Gewenste Datum (optioneel)</label> 
+                        <label for="date">Gewenste Datum (optioneel)</label>
                         <input type="date" id="date" name="date">
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="message">Bericht</label>
-                        <textarea id="message" name="message" placeholder="Beschrijf kort uw vraag of reden voor afspraak"></textarea>
+                        <label for="message">Bericht *</label>
+                        <textarea id="message" name="message" placeholder="Beschrijf kort uw vraag of reden voor afspraak" required></textarea>
                     </div>
-
-                    <button type="submit" class="btn">Verstuur Aanvraag</button>
+                    
+                    <button type="submit" class="btn" id="submitBtn">Verstuur Aanvraag</button>
+                    <p id="formFeedback" style="margin-top:1rem; font-weight:500;"></p>
                 </form>
             </div>
         </div>
     </section>
-
-    <!-- Footer ... (keep your previous HTML) -->
-
-    <!-- Scripts -->
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Maikel Roseval</h3>
+                    <p>Gediplomeerd Seksuoloog, Relatietherapeut en Educatief Cabaretier. Specialist in het bespreekbaar maken van seksualiteit en relaties.</p>
+                    
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contactgegevens</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Wannepad 93, 1066 HZ Amsterdam</p>
+                        <p><i class="fas fa-phone"></i> 06 449 707 65</p>
+                        <p><i class="fas fa-envelope"></i> info@maikelroseval.nl</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Werkgebieden</h3>
+                    <ul>
+                        <li>Sekscounseling</li>
+                        <li>Relatietherapie</li>
+                        <li>Workshops & Trainingen</li>
+                        <li>Educatief Theater</li>
+                        <li>Seksuele Voorlichting</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Snelle Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#diensten">Diensten</a></li>
+                        <li><a href="#video's">Video's</a></li>
+                        <li><a href="#over">Over Mij</a></li>
+                        <li><a href="#trainingen">Trainingen</a></li>
+                        <li><a href="#theater">Theater</a></li>
+                        <li><a href="#afspraak">Afspraak</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Maikel Roseval. Alle rechten voorbehouden.</p>
+                <p>KVK: 58863834 | BTW-nummer: NL212507278B02 | IBAN: NL23 ABNA 0548 6381 60</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div id="film-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Mijn Werk in Beeld</h2>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe src="https://player.vimeo.com/video/VIDEO_ID?h=HASH&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p style="margin-top: 20px;">Bekijk hier mijn documentaire over seksuele gezondheid en relaties in de moderne samenleving.</p>
+        </div>
+    </div>
+    
     <script>
-        // Menu toggle
+        // --- YOUR ORIGINAL SCRIPT (with modifications for Discord webhook) ---
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
         });
-
-        // Discord webhook submission
-        const form = document.getElementById('appointmentForm');
-        const webhookURL = 'https://discord.com/api/webhooks/1415743746313551912/ih2qoactfwUUQn_l-UeQnehwosS7UJyGTqk1Ci7Px0aZVbhbIpNP2Cn4HknHfO3wZ3nJ'; // <--- Replace this
-
-        form.addEventListener('submit', async (e) => {
+        
+        // Tab functionality
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                tabLinks.forEach(tab => tab.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Modal
+        const modal = document.getElementById('film-modal');
+        const filmLink = document.getElementById('film-link');
+        const closeModal = document.querySelector('.close-modal');
+        
+        filmLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
+            modal.style.display = 'block';
+        });
+        
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) modal.style.display = 'none';
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({ top: targetElement.offsetTop - 100, behavior: 'smooth' });
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
+                header.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.2)';
+                header.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
+            }
+        });
+        
+        // Animate on scroll
+        const animateOnScroll = function() {
+            document.querySelectorAll('.service-card, .video-card, .testimonial-card').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add('fade-in');
+            });
+        };
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();
+        
+        // ========== DISCORD WEBHOOK INTEGRATIE ==========
+        // Vervang onderstaande URL door jouw eigen Discord webhook URL
+        const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1415743746313551912/ih2qoactfwUUQn_l-UeQnehwosS7UJyGTqk1Ci7Px0aZVbhbIpNP2Cn4HknHfO3wZ3nJ";
+        
+        const form = document.getElementById('appointmentForm');
+        const feedbackEl = document.getElementById('formFeedback');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Visuele feedback
+            feedbackEl.style.color = 'blue';
+            feedbackEl.textContent = 'Verzenden...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = 0.6;
+            
+            // Velden uitlezen
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim() || 'niet opgegeven';
             const service = document.getElementById('service').value;
-            const date = document.getElementById('date').value || 'Geen datum opgegeven';
-            const message = document.getElementById('message').value || 'Geen bericht';
-
-            const payload = {
-                content: `**Nieuwe Afspraak Aanvraag**`,
-                embeds: [{
-                    title: "Afspraak Details",
-                    color: 16734039,
-                    fields: [
-                        { name: "Naam", value: name },
-                        { name: "Email", value: email },
-                        { name: "Telefoon", value: phone },
-                        { name: "Gewenste Dienst", value: service },
-                        { name: "Datum", value: date },
-                        { name: "Bericht", value: message }
-                    ],
-                    timestamp: new Date().toISOString()
-                }]
+            const date = document.getElementById('date').value || 'niet opgegeven';
+            const message = document.getElementById('message').value.trim();
+            
+            // Valideer
+            if (!name || !email || !service || !message) {
+                feedbackEl.style.color = 'red';
+                feedbackEl.textContent = 'Vul alle verplichte velden in.';
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = 1;
+                return;
+            }
+            
+            // Bouw Discord embed (mooi opgemaakt)
+            const embed = {
+                title: '📅 Nieuwe afspraakaanvraag',
+                color: 0x9E1F32, // primary color
+                fields: [
+                    { name: '👤 Naam', value: name, inline: true },
+                    { name: '📧 E-mail', value: email, inline: true },
+                    { name: '📞 Telefoon', value: phone, inline: true },
+                    { name: '📋 Gewenste dienst', value: service, inline: true },
+                    { name: '📅 Gewenste datum', value: date, inline: true },
+                    { name: '💬 Bericht', value: message.length > 100 ? message.substring(0, 100) + '…' : message, inline: false }
+                ],
+                timestamp: new Date().toISOString(),
+                footer: { text: 'Maikel Roseval website' }
             };
-
+            
+            // Als bericht langer is, stuur dan extra field met volledig bericht
+            if (message.length > 100) {
+                embed.fields.push({ name: '📝 Volledig bericht', value: message, inline: false });
+            }
+            
+            const payload = {
+                embeds: [embed]
+            };
+            
             try {
-                const response = await fetch(webhookURL, {
+                const response = await fetch(DISCORD_WEBHOOK_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
-
+                
                 if (response.ok) {
-                    alert('Bedankt! Uw aanvraag is verzonden.');
-                    form.reset();
+                    feedbackEl.style.color = 'green';
+                    feedbackEl.textContent = '✅ Aanvraag verstuurd! We nemen zo spoedig mogelijk contact op.';
+                    form.reset(); // optioneel leegmaken
                 } else {
-                    alert('Er is iets misgegaan. Probeer het opnieuw.');
+                    console.error('Discord webhook error:', response.status, response.statusText);
+                    feedbackEl.style.color = 'red';
+                    feedbackEl.textContent = '❌ Er is een fout opgetreden. Probeer het later opnieuw of mail direct naar info@maikelroseval.nl.';
                 }
             } catch (error) {
-                console.error('Error:', error);
-                alert('Er is een fout opgetreden bij het verzenden.');
+                console.error('Netwerkfout:', error);
+                feedbackEl.style.color = 'red';
+                feedbackEl.textContent = '❌ Geen verbinding. Controleer je internet of mail naar info@maikelroseval.nl.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = 1;
             }
         });
     </script>
